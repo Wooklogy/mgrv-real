@@ -2,7 +2,8 @@
 const nextConfig = {
   reactStrictMode: true,
   env: {
-    MAX_PIN_PAWSSWORD: 6,
+    MAX_COUNT_PIN_PAWSSWORD: 6,
+    MAX_COUNT_ACCOUNT_PASSWORD,
   },
 };
 
