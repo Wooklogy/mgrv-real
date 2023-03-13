@@ -63,8 +63,8 @@
   "up.privacy": "Privacy Policy.",
   "up.already": "Already have an account?",
   "node.puchase.rewoerd": "Buy a Founder's Node and get a reward!",
-  "node.oper1": "50,000 nodes run by players themselves It powers MGROVE`s ecosystem",
-  "node.oper2": "MGROVE`s decentralized ecosystem wants to open its doorsto everyone and give players back the control they deserve.",
+  "node.oper1": "50,000 nodes run by players themselves It powers MGROVE's ecosystem",
+  "node.oper2": "MGROVE's decentralized ecosystem wants to open its doorsto everyone and give players back the control they deserve.",
   "node.oper3": "Decentralization allows players not only to own in-game items,but also to have a voice in the development direction of theMGROVE roadmap.",
   "node.oper4": "Players and node operators can participate indeciding which games to add to the platform, which games to fund,etc. through a decentralized voting mechanism.",
   "node.round": "Sales round",
@@ -404,5 +404,5 @@
   "message.success.change_nickname": "Your Nickname change is complete.",
   "message.success.change_profile": "Your profile change is complete.",
   "voca.recive": "recive",
-  "voca.return": ""
+  "voca.return": "return"
 }
