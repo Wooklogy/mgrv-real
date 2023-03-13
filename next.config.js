@@ -1,9 +1,27 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
+  compiler: {
+    styledComponents: true,
+  },
+  webpack: (config, { isServer }) => {
+    config.module.rules.push({
+      test: /\.svg$/,
+      use: ["@svgr/webpack"],
+    });
+    if (!isServer) {
+      config.resolve.fallback = {
+        fs: false,
+        child_process: false,
+        net: false,
+        tls: false,
+      };
+    }
+
+    return config;
+  },
   env: {
-    MAX_COUNT_PIN_PAWSSWORD: 6,
-    MAX_COUNT_ACCOUNT_PASSWORD,
+    DEV_BACK_URL: "http://localhost:8080/",
+    PROD_BACK_URL: "https://mgrove.info/",
   },
 };
 

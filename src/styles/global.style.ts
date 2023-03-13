@@ -2,6 +2,7 @@ export interface WoAppThemeProps {
   color: {
     primary?: string;
     primary_alpha?: string;
+    // text and default
     text?: string;
     text_second: string;
     text_third: string;
@@ -47,4 +48,25 @@ export const AppTheme: WoAppThemeProps = {
     abstract: "2.5rem",
     title: "3rem",
   },
+};
+export const STYLE_GRADIANT_COLOR1 = "#E0C3FC";
+export const STYLE_GRADIANT_COLOR2 = "#8EC5FC";
+export const HeaderHeight = 72;
+export const AppResolution = [2560, 1440, 1024, 768, 600];
+export const ResoulutionReturner = (
+  windowWidth: number,
+  pc: any,
+  horizon_tablet: any,
+  tablet: any,
+  mobile: any
+) => {
+  return windowWidth >= AppResolution[2]
+    ? pc
+    : windowWidth < AppResolution[2] && windowWidth >= AppResolution[3]
+    ? horizon_tablet
+    : windowWidth < AppResolution[3] && windowWidth >= AppResolution[4]
+    ? tablet
+    : windowWidth < AppResolution[4]
+    ? mobile
+    : pc;
 };
