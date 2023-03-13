@@ -15,11 +15,12 @@ import { recoilState_Resize } from "@/recoils/states.recoil";
 import { AppTheme, ResoulutionReturner } from "@/styles/global.style";
 import { Divider } from "antd";
 import { useTranslation } from "react-i18next";
+import YouTube from "react-youtube";
 import { useRecoilValue } from "recoil";
 
 export default function Home() {
   const windowWidth = useRecoilValue(recoilState_Resize);
-  const { t } = useTranslation();
+  const { i18n, t } = useTranslation();
   const mainCarouselItem: CustomMainCarouselItemProps[] = [
     {
       src: "/images/node.jpg",
@@ -401,18 +402,16 @@ export default function Home() {
               ratioX={16}
               ratioY={9}
               row_count={1}
-              elements={
-                [
-                  // <YouTube
-                  //   key={"mgrv-youtube"}
-                  //   videoId={
-                  //     i18n.language === "ko-KR" ? "M-M3C2adOss" : "9c-hn3W5L6g"
-                  //   }
-                  //   style={{ width: "100%", height: "100%" }}
-                  //   opts={{ width: "100%", height: "100%" }}
-                  // ></YouTube>,
-                ]
-              }
+              elements={[
+                <YouTube
+                  key={"mgrv-youtube"}
+                  videoId={
+                    i18n.language === "ko-KR" ? "M-M3C2adOss" : "9c-hn3W5L6g"
+                  }
+                  style={{ width: "100%", height: "100%" }}
+                  opts={{ width: "100%", height: "100%" }}
+                ></YouTube>,
+              ]}
             ></CustomCarousel>
           </CustomCol>
           <CustomCol
