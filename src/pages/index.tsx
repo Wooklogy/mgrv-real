@@ -1,3 +1,4 @@
+import CustomBanner from "@/components/banners/Banner.comp";
 import CustomBoxEco from "@/components/boxs/Box.eco.comp";
 import CustomBoxGame from "@/components/boxs/Box.game.comp";
 import CustomBoxNews from "@/components/boxs/Box.news.comp";
@@ -513,13 +514,13 @@ export default function Home() {
           </CustomCol>
         </CustomRow> */}
       </FullLayout>
-      {/* {
+      {
         <CustomBanner
           className="margin-top-5"
           height={"25rem"}
           src={"/images/sampleBG_dark.jpg"}
         ></CustomBanner>
-      } */}
+      }
     </CustomRow>
   );
 }
