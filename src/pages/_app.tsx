@@ -32,7 +32,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <Hydrate state={pageProps.dehydratedState}>
         <RecoilRoot>
           <Head>
-            <title>::Wooklogy::</title>
+            <title>::MGROVE::</title>
             <meta
               name="viewport"
               content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0"
