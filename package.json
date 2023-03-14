@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "NODE_ENV=production next start",
     "lint": "next lint",
-    "deploy" : "next build && npx pm2 start yarn -- start",
+    "deploy": "next build && npx pm2 start --name 'mgrv-front' yarn -- start",
     "update:i18n": "node src/locales/push.js"
   },
   "dependencies": {
