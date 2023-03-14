@@ -23,10 +23,9 @@ export const queryClient = new QueryClient({
     },
   },
 });
+i18nInit();
 
 export default function App({ Component, pageProps }: AppProps) {
-  i18nInit();
-
   return (
     <QueryClientProvider client={queryClient}>
       <Hydrate state={pageProps.dehydratedState}>
