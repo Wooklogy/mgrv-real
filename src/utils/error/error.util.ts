@@ -13,6 +13,6 @@ export const ReactQueryBoundary = (error: unknown) => {
 
   if (!status) return false;
   else if (status === 403) return false;
-  else if (status < 410 || status > 500) return true;
-  return true;
+  else if (status > 500) return true;
+  return false;
 };
