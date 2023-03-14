@@ -68,8 +68,8 @@ const CustomTableStyle = styled(Table)<CustomTableProps>`
 export const EmptyTableStyle = () => {
   return (
     <span className="empty-text">
-      <div>{t("w.notransactions")}</div>
-      <div>{t("w.aftertransaction")}</div>
+      {/* <div>{t("w.notransactions")}</div> */}
+      {/* <div>{t("w.aftertransaction")}</div> */}
     </span>
   );
 };
