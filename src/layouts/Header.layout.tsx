@@ -43,6 +43,7 @@ import {
 } from "@/styles/global.style";
 import CustomBox from "@/components/boxs/Box.comp";
 import CustomDrawer from "@/components/drawers/Drawer.comp";
+import i18n from "@/locales/i18next";
 
 interface NavigateProps {
   key?: string;
@@ -63,7 +64,7 @@ const CustomHeaderLayout: React.FC<PropsWithChildren> = () => {
   const [visibleOTP, setVisibleOTP] = React.useState<boolean>(true);
   const [onAirdrop, setOnAirdrop] = React.useState<boolean>(false);
   const [onHistory, setOnHistory] = React.useState<boolean>(false);
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const [openMenu, setMenu] = React.useState<boolean>(false);
   const navigate: NavigateProps[] = [
     {
@@ -508,6 +509,7 @@ const CustomHeaderLayout: React.FC<PropsWithChildren> = () => {
                     i18n.language === "ko-KR"
                       ? i18n.changeLanguage("en-US")
                       : i18n.changeLanguage("ko-KR");
+                    localStorage.setItem("SET_LANGUAGE", "ko-KR");
                   }}
                 >
                   <AiOutlineGlobal className="margin-right-05" />
@@ -579,6 +581,8 @@ const CustomHeaderLayout: React.FC<PropsWithChildren> = () => {
                     })}
                     <MenuItem
                       onClick={() => {
+                        localStorage.setItem("SET_LANGUAGE", "ko-KR");
+
                         i18n.language === "ko-KR"
                           ? i18n.changeLanguage("en-US")
                           : i18n.changeLanguage("ko-KR");

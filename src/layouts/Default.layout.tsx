@@ -1,5 +1,6 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import usePrincipal from "@/hooks/usePrincipal";
+import i18n from "@/locales/i18next";
 import {
   recoilState_Resize,
   recoilState_ScrollY,
@@ -39,6 +40,7 @@ const DefaultLayout: React.FC<PropsWithChildren> = ({ children }) => {
   }, []);
   React.useEffect(() => {
     refreshPrincipal();
+    i18n.changeLanguage(localStorage.getItem("SET_LANGUAGE") || "en-US");
   }, [router.pathname]);
   return (
     <>
