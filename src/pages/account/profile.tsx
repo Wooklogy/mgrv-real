@@ -33,7 +33,12 @@ const ProfileSettingPage: React.FC = () => {
   const [loading, setLoading] = React.useState<boolean>(false);
   const [validate, setValidate] = React.useState<ValidateCheckType>();
   const [value, setValue] = React.useState<string>("");
-  const [profile, setProfile] = React.useState<APIAccountModifyProfileProps>();
+  const [profile, setProfile] = React.useState<APIAccountModifyProfileProps>({
+    birth_date:
+      dayjs(principal?.birth_date).format("YYYY-MM-DD") ||
+      dayjs().format("YYYY-MM-DD"),
+    country_code: principal?.country_code,
+  });
   const apiChangeNickname = useMutation(APIAccountModifyNickname, {
     onMutate: (variable) => {
       setLoading(true);
@@ -77,6 +82,13 @@ const ProfileSettingPage: React.FC = () => {
     } else {
       setAbleModifyNickname(false);
     }
+
+    setProfile({
+      birth_date:
+        dayjs(principal?.birth_date).format("YYYY-MM-DD") ||
+        dayjs().format("YYYY-MM-DD"),
+      country_code: principal?.country_code,
+    });
   }, [principal]);
   const handleNicknameValidate = async (e: any) => {
     const value: string = e?.target?.value;
@@ -238,13 +250,11 @@ const ProfileSettingPage: React.FC = () => {
               onChange={(val, _val) => {
                 setProfile((prev: any) => ({
                   ...prev,
-                  birth_date: dayjs().isAfter(_val) ? dayjs() : _val,
+                  birth_date: _val,
                 }));
               }}
+              value={dayjs(profile.birth_date)}
               disabledDate={(d) => d.isAfter(dayjs())}
-              value={dayjs(
-                profile?.birth_date || principal?.birth_date || undefined
-              )}
               style={{ width: "100%" }}
             ></DatePicker>
           </CustomCol>
