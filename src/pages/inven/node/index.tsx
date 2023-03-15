@@ -83,7 +83,8 @@ const InventoryNodePage: React.FC = () => {
           >
             <CustomText weight={"bold"}>
               {t("node.child", {
-                number: myChildNodes.data && myChildNodes.data?.data?.length,
+                number:
+                  (myChildNodes.data && myChildNodes.data?.data?.length) || 0,
               })}
             </CustomText>
           </Popover>

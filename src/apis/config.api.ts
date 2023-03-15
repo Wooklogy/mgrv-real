@@ -15,6 +15,8 @@ export const getAPIHost = () => {
 
 const axiosRestConfig: AxiosRequestConfig = {
   baseURL: getAPIHost(),
+  timeout: 10000,
+  timeoutErrorMessage: "Time Out Error!!!\nCheck Your Internet",
 };
 
 export const REST_API = axios.create(axiosRestConfig);
@@ -22,6 +24,8 @@ export const REST_API = axios.create(axiosRestConfig);
 export const AUTH_API = axios.create({
   baseURL: getAPIHost(),
   withCredentials: true,
+  timeout: 10000,
+  timeoutErrorMessage: "Time Out Error!!!\nCheck Your Internet",
 });
 
 // request interceptor subscript
