@@ -22,6 +22,8 @@ export const APIAuthAccess = async () => {
     setToken(authToken);
     return response;
   } catch (err) {
+    removeToken(TokenName);
+
     const error = err as AxiosError;
     throw error;
   }
