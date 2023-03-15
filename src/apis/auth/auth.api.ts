@@ -23,6 +23,7 @@ export const APIAuthAccess = async () => {
     return response;
   } catch (err) {
     const error = err as AxiosError;
+    localStorage.removeItem(TokenName);
     throw error;
   }
 };
