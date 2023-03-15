@@ -23,7 +23,6 @@ export const APIAuthAccess = async () => {
     return response;
   } catch (err) {
     const error = err as AxiosError;
-    localStorage.removeItem(TokenName);
     throw error;
   }
 };
@@ -39,8 +38,6 @@ export const APIAuthLogin = async (account_info?: APIAuthLoginType) => {
 
     return getResponse;
   } catch (err) {
-    removeToken(TokenName);
-
     const error = err as AxiosError;
     throw error;
   }
