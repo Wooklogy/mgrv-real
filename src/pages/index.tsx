@@ -33,12 +33,12 @@ export default function Home() {
           <CustomText weight={"bold"} size="sm" color={AppTheme.color.white}>
             {/* {t("main.sale")} */}
           </CustomText>
-          <CustomText weight={"bold"} color={AppTheme.color.white}>
+          {/* <CustomText weight={"bold"} color={AppTheme.color.white}>
             현재가 $1,100
-          </CustomText>
-          <CustomText weight={"bold"} color={AppTheme.color.white}>
+          </CustomText> */}
+          {/* <CustomText weight={"bold"} color={AppTheme.color.white}>
             판매라운드 896/50,000
-          </CustomText>
+          </CustomText> */}
           <CustomButton
             className="margin-top-1"
             width={"15rem"}
