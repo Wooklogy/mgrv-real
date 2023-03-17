@@ -16,10 +16,6 @@ export const getAPIHost = () => {
 const axiosRestConfig: AxiosRequestConfig = {
   baseURL: getAPIHost(),
   withCredentials: true,
-  headers: {
-    "Content-Type": "application/x-www-form-urlencoded",
-    "Access-Control-Allow-Origin": getAPIHost(),
-  },
 };
 
 export const REST_API = axios.create(axiosRestConfig);
@@ -27,10 +23,6 @@ export const REST_API = axios.create(axiosRestConfig);
 export const AUTH_API = axios.create({
   baseURL: getAPIHost(),
   withCredentials: true,
-  headers: {
-    "Content-Type": "application/x-www-form-urlencoded",
-    "Access-Control-Allow-Origin": getAPIHost(),
-  },
 });
 
 // request interceptor subscript
