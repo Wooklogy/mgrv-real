@@ -152,7 +152,7 @@ const MainMgrvPage: React.FC = () => {
           </CustomRow>
           <CustomRow className="justify-center">
             <CustomText size="xxl" weight={"bold"}>
-              {896}
+              {850}
             </CustomText>
           </CustomRow>
           <CustomRow className="justify-center">
@@ -179,7 +179,7 @@ const MainMgrvPage: React.FC = () => {
               size="xxl"
               weight={"bold"}
             >
-              {"$ 1,100"}
+              {"$ 0"}
             </CustomText>
           </CustomRow>
           <CustomRow className="justify-center">
@@ -200,7 +200,7 @@ const MainMgrvPage: React.FC = () => {
           </CustomRow>
           <CustomRow className="justify-center">
             <CustomText size="xxl" weight={"bold"}>
-              {"92"}
+              {"50"}
             </CustomText>
           </CustomRow>
           <CustomRow className="justify-center">

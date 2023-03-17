@@ -40,7 +40,12 @@ const DefaultLayout: React.FC<PropsWithChildren> = ({ children }) => {
   }, []);
   React.useEffect(() => {
     refreshPrincipal();
-    i18n.changeLanguage(localStorage.getItem("SET_LANGUAGE") || "en-US");
+    if (
+      localStorage.getItem("SET_LANGUAGE") &&
+      localStorage.getItem("SET_LANGUAGE") == i18n.language
+    ) {
+      i18n.changeLanguage(localStorage.getItem("SET_LANGUAGE") || "en-US");
+    }
   }, [router.pathname]);
   return (
     <>

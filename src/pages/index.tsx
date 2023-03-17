@@ -431,26 +431,32 @@ export default function Home() {
               arrow_color={AppTheme.color.text}
               elements={[
                 <CustomBoxNews
-                  src="/images/news.png"
-                  key={"mgrv-youtube1"}
+                  src="/images/photo_2023-03-17_11-40-56.jpg"
+                  key={"mgrv-news1"}
+                  title={
+                    "MGROVE, Metaverse Labs Group와 손잡고 가상세계 확장 추진"
+                  }
                   link={"https://mgrovenews.com/forum/view/228592"}
                 ></CustomBoxNews>,
                 <CustomBoxNews
-                  src="/images/news.png"
-                  key={"mgrv-youtube2"}
+                  src="/images/photo_2023-03-17_11-40-54.jpg"
+                  key={"mgrv-news2"}
+                  title={"MGROVE, Metaverse Labs Group WEB3.0 AI 기술 개발"}
                   link={"https://www.mgrovenews.com/forum/view/227877"}
                 ></CustomBoxNews>,
                 <CustomBoxNews
-                  src="/images/news.png"
-                  key={"mgrv-youtube3"}
+                  src="/images/photo_2023-03-17_11-40-53.jpg"
+                  key={"mgrv-news3"}
+                  title={"WEB 3.0 게임의 자유"}
+                  link={"https://www.mgrovenews.com/forum/view/227877"}
                 ></CustomBoxNews>,
                 <CustomBoxNews
-                  src="/images/news.png"
-                  key={"mgrv-youtube4"}
-                ></CustomBoxNews>,
-                <CustomBoxNews
-                  src="/images/news.png"
-                  key={"mgrv-youtube5"}
+                  src="/images/photo_2023-03-17_11-40-50.jpg"
+                  key={"mgrv-news4"}
+                  title={
+                    "MGROVE, Metaverse Labs Group과 협력하여 WEB3.0용 보드게임 개발"
+                  }
+                  link={"https://www.mgrovenews.com/forum/view/227877"}
                 ></CustomBoxNews>,
               ]}
             ></CustomCarousel>
