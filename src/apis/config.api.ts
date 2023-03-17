@@ -15,6 +15,7 @@ export const getAPIHost = () => {
 
 const axiosRestConfig: AxiosRequestConfig = {
   baseURL: getAPIHost(),
+  withCredentials: true,
 };
 
 export const REST_API = axios.create(axiosRestConfig);
