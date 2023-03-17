@@ -21,7 +21,7 @@ const nextConfig = {
   },
   env: {
     DEV_BACK_URL: "http://localhost:8080/",
-    PROD_BACK_URL: "https://mgrove.info/",
+    PROD_BACK_URL: "http://localhost:8080/",
   },
 };
 
