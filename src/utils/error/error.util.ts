@@ -1,3 +1,5 @@
+import { message } from "antd";
+
 export class CustomErrorType extends Error {
   response?: {
     data: any;
@@ -13,6 +15,9 @@ export const ReactQueryBoundary = (error: unknown) => {
 
   if (!status) return false;
   else if (status === 403) return false;
-  else if (status > 500) return true;
+  else if (status === 502) {
+    message.error("cors error!!! : try again");
+    return false;
+  } else if (status > 500) return true;
   return false;
 };
