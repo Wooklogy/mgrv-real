@@ -404,5 +404,11 @@
   "message.success.change_nickname": "Your Nickname change is complete.",
   "message.success.change_profile": "Your profile change is complete.",
   "voca.recive": "recive",
-  "voca.return": "return"
+  "voca.return": "return",
+  "w.notransactions": "",
+  "w.aftertransaction": "",
+  "sale.node": "sold",
+  "last.node": "last node",
+  "sale.quantity.node": "quantity left",
+  "quantity.node": "quantity"
 }

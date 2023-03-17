@@ -433,10 +433,12 @@ export default function Home() {
                 <CustomBoxNews
                   src="/images/news.png"
                   key={"mgrv-youtube1"}
+                  link={"https://mgrovenews.com/forum/view/228592"}
                 ></CustomBoxNews>,
                 <CustomBoxNews
                   src="/images/news.png"
                   key={"mgrv-youtube2"}
+                  link={"https://www.mgrovenews.com/forum/view/227877"}
                 ></CustomBoxNews>,
                 <CustomBoxNews
                   src="/images/news.png"

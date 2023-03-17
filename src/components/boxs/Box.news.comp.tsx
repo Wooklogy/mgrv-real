@@ -16,7 +16,12 @@ export interface CustomBoxProductProps extends CustomBoxProps {
 
 const CustomBoxNews: React.FC<CustomBoxProductProps> = (props) => {
   return (
-    <CustomBoxNewsStyle {...props}>
+    <CustomBoxNewsStyle
+      {...props}
+      onClick={() => {
+        if (props.link) window.open(props.link, "_blank");
+      }}
+    >
       <CustomRow className="box-img" height={"65%"}>
         {props.src && (
           <Image src={props.src} alt={props.src} fill priority={true}></Image>
